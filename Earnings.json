@@ -1,0 +1,27 @@
+{
+    "name": "Earning",
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "number",
+        "description": "Amount earned in INR"
+      },
+      "ad_view_id": {
+        "type": "string",
+        "description": "Reference to the ad view that generated this earning"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "confirmed",
+          "paid"
+        ],
+        "default": "pending",
+        "description": "Status of the earning"
+      }
+    },
+    "required": [
+      "amount"
+    ]
+  }

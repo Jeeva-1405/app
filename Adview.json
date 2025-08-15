@@ -1,0 +1,62 @@
+{
+    "name": "AdView",
+    "type": "object",
+    "properties": {
+      "ad_title": {
+        "type": "string",
+        "description": "Title of the advertisement"
+      },
+      "ad_description": {
+        "type": "string",
+        "description": "Description of the ad content"
+      },
+      "ad_duration": {
+        "type": "number",
+        "description": "Duration in seconds"
+      },
+      "reward_amount": {
+        "type": "number",
+        "description": "Earning amount for watching this ad"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "completed",
+          "in_progress",
+          "skipped"
+        ],
+        "default": "in_progress",
+        "description": "Status of ad viewing"
+      },
+      "watch_time": {
+        "type": "number",
+        "description": "Actual time watched in seconds"
+      },
+      "completion_percentage": {
+        "type": "number",
+        "description": "Percentage of ad completed"
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "technology",
+          "lifestyle",
+          "entertainment",
+          "finance",
+          "shopping",
+          "travel",
+          "health"
+        ],
+        "description": "Ad category"
+      },
+      "advertiser": {
+        "type": "string",
+        "description": "Name of the advertiser"
+      }
+    },
+    "required": [
+      "ad_title",
+      "ad_duration",
+      "reward_amount"
+    ]
+  }
